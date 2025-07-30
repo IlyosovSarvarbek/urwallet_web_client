@@ -11,7 +11,7 @@ export default function HomePage() {
     const {user, logout} = useAuth();
     useEffect(() => {
     if (user) router.replace("/sign-in");
-  }, [user]);
+  }, [user, router]);
   return (
     <div className="relative flex size-full min-h-screen flex-col overflow-x-hidden overflow-y-auto">
       <div className="layout-container flex h-full grow flex-col">
@@ -25,7 +25,7 @@ export default function HomePage() {
                 Welcome back, Sarah 👋
               </h2>
               <p className="text-secondary mt-1">
-                Here's a summary of your financial activity.
+                Here&apos;s a summary of your financial activity.
               </p>
             </div>
 

@@ -9,7 +9,7 @@ export default function SignIn() {
   const {user, loginWithGoogle} = useAuth();
   useEffect(() => {
   if (user) router.replace("/");
-}, [user]);
+}, [user, router]);
 
   return (
       <div className="min-h-screen flex items-center justify-center bg-[var(--color-background)] px-4 py-12">
